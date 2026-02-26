@@ -9,42 +9,31 @@
   <a href="./README.es.md"><img src="https://img.shields.io/badge/README-Español-c92a2a?style=for-the-badge" alt="Español"></a>
 </p>
 
-<p align="center"><em>🔍 OSINT stealth/anti-fingerprint.</em></p>
-
----
-
 ## Overview
-Escáner OSINT con navegación stealth, rotación de huellas y estrategias anti-fingerprinting para investigación en superficies complejas manteniendo trazabilidad y límites éticos.
+Stealth OSINT scanner with anti-fingerprinting and controlled evidence extraction.
 
-## Architecture of understanding
-```mermaid
-flowchart LR
-  A[Input goal] --> B[Scope check]
-  B --> C[Plan minimal steps]
-  C --> D[Execute safely]
-  D --> E[Verify outcomes]
-  E --> F[Report + next steps]
-```
+## Purpose
+Deep research/OSINT stealth: navega superficies complejas con anti-fingerprinting y extracción de intel con trazabilidad.
 
 ## Installation
 ```bash
 git clone https://github.com/smouj/Abyss-Scanner.git
 cd Abyss-Scanner
-# read the contract
 cat SKILL.md
 ```
 
-## Quick usage
-```bash
-# Example placeholder command
-printf "running abyss-scanner...\n"
+## Architecture (understanding)
+```mermaid
+flowchart LR
+  A[Input] --> B[Validate scope]
+  B --> C[Plan safe steps]
+  C --> D[Execute]
+  D --> E[Verify]
+  E --> F[Report]
 ```
 
-## Badges
-- Status: Initiating
-- Difficulty: Muy Alta
+## Status
+Initiating
 
-## Roadmap
-- [ ] Implement core logic v0
-- [ ] Add integration tests
-- [ ] Publish stable tag v1.0.0
+## Difficulty
+Muy Alta
