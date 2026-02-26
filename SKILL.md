@@ -2,7 +2,7 @@
 name: abyss-scanner
 description: >
   Abyss Scanner skill for osint operations in multi-agent ecosystems. Use when tasks require osint analysis, automation, and safe execution workflows.
-version: "1.0.0"
+version: "1.0.1"
 tags: [osint, ai-agents, openclaw]
 metadata:
   author: smouj
