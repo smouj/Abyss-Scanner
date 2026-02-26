@@ -1,59 +1,45 @@
 ---
-name: abyss-scanner
-description: "🔍 OSINT stealth/anti-fingerprint."
+name: Abyss Scanner
+description: "🔍 Stealth OSINT scanner with anti-fingerprinting and controlled evidence extraction."
+when: "When a user request matches abyss-scanner capabilities or requires this domain-specific workflow."
+examples:
+  - "Run Abyss Scanner for this task"
+  - "Apply Abyss Scanner to solve this workflow"
 metadata:
-  {
-    "openclaw": {
-      "emoji": "🔍",
-      "version": "0.2.0",
-      "author": "smouj",
-      "lang_default": "en"
-    }
-  }
+  openclaw:
+    requires: ["fs_read", "fs_write", "shell_exec", "memory_search"]
+  safety_level: high
+  version: "1.0.0"
+  author: "smouj"
+  tags: ["abyss-scanner", "automation", "openclaw-skill"]
 ---
 
 # 🔍 Abyss Scanner
 
 ## Purpose
-Escáner OSINT con navegación stealth, rotación de huellas y estrategias anti-fingerprinting para investigación en superficies complejas manteniendo trazabilidad y límites éticos.
+Deep research/OSINT stealth: navega superficies complejas con anti-fingerprinting y extracción de intel con trazabilidad.
 
-## Tags
-- security
-- reliability
-- automation
-- openclaw-skill
+## How to Use / Core Instructions
+1. Primero piensa en alcance, riesgo y coste.
+2. Luego valida inputs y dependencias mínimas.
+3. Ejecuta en pasos pequeños y reversibles.
+4. Verifica resultado con checks explícitos.
+5. Si hay error, falla seguro y reporta causa + próximo paso.
 
-## Execution contract
-1. Validate request and constraints.
-2. Generate minimal safe plan.
-3. Execute in reversible steps.
-4. Verify with explicit checks.
-5. Return concise summary + next actions.
+## Security & Safety Guidelines
+Nunca ejecutes código sospechoso sin sandbox. Reporta riesgos al usuario. No envíes datos sensibles fuera del entorno local.
 
-## Inputs expected
-- Goal
-- Constraints (time/cost/privacy)
-- Optional files/URLs
+## Tools Required
+- fs_read
+- fs_write
+- shell_exec
+- memory_search
 
-## Outputs
-- Plan
-- Actions executed
-- Verification results
-- Rollback notes
+## Example Flows
+- Entrada -> validación -> plan -> ejecución -> verificación -> reporte.
+- Reintento controlado con rollback si falla.
 
-## Guardrails
-- Never expose secrets.
-- No destructive operation without explicit confirmation.
-- Fail safe with actionable diagnostics.
-
-## Commands
-```bash
-# Placeholder entrypoint
-printf "abyss-scanner: validate -> execute -> verify\n"
-```
-
-## Test checklist
-- [ ] Happy path
-- [ ] Error handling
-- [ ] Idempotency
-- [ ] Guardrails respected
+## Edge Cases & Error Handling
+- Input incompleto: pedir datos mínimos.
+- Dependencia ausente: degradar en modo seguro.
+- Error persistente: detener, registrar y escalar.
